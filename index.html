@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>konkirato</title>
+  <meta name="description" content="konkirato の作品一覧">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1f2328;
+      --sub: #59636e;
+      --line: #e3e3df;
+      --accent: #0969da;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --text: #e6edf3;
+        --sub: #9198a1;
+        --line: #30363d;
+        --accent: #4493f8;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 16px 72px;
+    }
+    header { margin-bottom: 40px; }
+    h1 { font-size: 2rem; margin: 0 0 4px; }
+    header p { margin: 0; color: var(--sub); }
+    header a { color: var(--accent); }
+    h2 {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: var(--sub);
+      margin: 0 0 12px;
+    }
+    .card {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.15rem; }
+    .card p { margin: 0 0 12px; color: var(--sub); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .tags span {
+      font-size: 0.78rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 1px 10px;
+      color: var(--sub);
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+    footer { margin-top: 48px; color: var(--sub); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>konkirato</h1>
+      <p>作ったものの一覧です。 <a href="https://github.com/konkirato">GitHub</a></p>
+    </header>
+
+    <section>
+      <h2>作品</h2>
+
+      <div class="card">
+        <h3>川越ガイド</h3>
+        <p>川越を訪れる人向けの、会話フレーズの音声再生と通貨換算ができるWebページ。</p>
+        <div class="tags">
+          <span>HTML / CSS / JavaScript</span>
+          <span>日本語・English・中文・한국어・ภาษาไทย</span>
+        </div>
+        <div class="links">
+          <a href="https://konkirato.github.io/kawagoe-guide/">サイトを見る →</a>
+          <a href="https://github.com/konkirato/kawagoe-guide">ソースコード</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>パドックノート</h3>
+        <p>paddock-note</p>
+        <div class="tags">
+          <span>TypeScript</span>
+        </div>
+        <div class="links">
+          <a href="https://konkirato.github.io/paddock-note/">サイトを見る →</a>
+          <a href="https://github.com/konkirato/paddock-note">ソースコード</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>© konkirato</footer>
+  </main>
+</body>
+</html>
